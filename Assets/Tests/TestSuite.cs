@@ -15,18 +15,35 @@ namespace Tests
             result = Calculator.CalculatePair(5, 2, "+");
             Assert.AreEqual(result, 7);
         }
-
-        [UnityTest]
-        public IEnumerator TestUnityAddition()
+        [Test]
+        public void TestPWR()
         {
-            yield return null;
-            result = Calculator.CalculatePair(5, 2, "+");
-            Assert.AreEqual(result,7);
+            result = Calculator.CalculatePair(5, 2, "^");
+            Assert.AreEqual(result, 25);
         }
         [Test]
-        public void TestSuiteSimplePasses()
+        public void TestSubtraction()
         {
-            // Use the Assert class to test conditions
+            result = Calculator.CalculatePair(7, 2, "-");
+            Assert.AreEqual(result, 5);
+        }
+        [Test]
+        public void TestMultiplication()
+        {
+            result = Calculator.CalculatePair(4, 3, "*");
+            Assert.AreEqual(result, 12);
+        }
+        [Test]
+        public void TestDivision()
+        {
+            result = Calculator.CalculatePair(15, 3,"/");
+            Assert.AreEqual(result, 5);
+        }
+        [Test]
+        public void TestSQRT()
+        {
+            result = Calculator.CalculatePair(16,1, "SQRT");
+            Assert.AreEqual(result, 4);
         }
 
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
